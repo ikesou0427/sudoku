@@ -28,7 +28,9 @@ int checkRow(VVI table, int row) {
     return ableRowFlg;
 }
 int checkCol(VVI table, int col) {
-    int ableColFlg = 0b1111111111;
+    int ableColFlg = 0b1111111111; //  0123456789
+                                   //  ----------
+                                   //0b1111111111 各桁が上の数に対応
     for(int i = 0;i < TABLE_SIZE;i++) {
         if(table[i][col] != 0) {
             ableColFlg = ableColFlg ^ CONVERT_LIST[table[i][col]];  
